@@ -16,33 +16,43 @@ locations = [{
 
 users = [{
   username: "robgonnella",
+  email:    "robgonnella@gmail.com",
   password: "1a2s3d4f"
   }, {
   username: "burlweathers",
+  email:    "burlweathers@gmail.com",
   password: "abc123"
   }, {
   username: "taconator",
+  email:    "taconator@gmail.com",
   password: "tacotacotaco"
   }, {
   username: "jamesbrown",
+  email:    "sexmachine@gmail.com",
   password: "sexmachine"
   }, {
   username: "mrT",
+  email:    "mrt@gmail.com",
   password: "pitythefool"
   }, {
   username: "georgecarlin",
+  email:    "gcarlin@gmail.com",
   password: "bullshit"
   }, {
-  username: "georgeforman",
+  username: "georgeforeman",
+  email:    "gforeman@gmail.com",
   password: "leanmean"
   }, {
   username: "georgeharrison",
+  email:    "gharrison@gmail.com",
   password: "thebestbeatle"
   }, {
   username: "georgeclinton",
+  email:    "wewantthefunk@gmail.com",
   password: "funkadelic"
   }, {
   username: "curiousgeorge",
+  email:    "curious@gmail.com",
   password: "$%&@"
   },
 ]
