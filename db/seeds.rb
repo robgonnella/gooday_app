@@ -10,7 +10,8 @@ locations = [{
   }, {
   state: "MA",
   city: "Boston"
-}]
+  }
+]
 
 
 users = [{
@@ -44,7 +45,7 @@ users = [{
   username: "curiousgeorge",
   password: "$%&@"
   },
-}]
+]
 
 goodspots = [{
   name:         "The Museum of Jurrassic Technology",
