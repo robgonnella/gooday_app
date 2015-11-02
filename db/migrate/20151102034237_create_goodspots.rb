@@ -1,7 +1,8 @@
 class CreateGoodspots < ActiveRecord::Migration
   def change
     create_table :goodspots do |t|
-      t.string :description
+      t.string :name
+      t.text   :description
       t.string :address
       t.string :url
       t.string :category

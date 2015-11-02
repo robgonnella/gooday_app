@@ -17,7 +17,8 @@ ActiveRecord::Schema.define(version: 20151102034237) do
   enable_extension "plpgsql"
 
   create_table "goodspots", force: :cascade do |t|
-    t.string   "description"
+    t.string   "name"
+    t.text     "description"
     t.string   "address"
     t.string   "url"
     t.string   "category"
