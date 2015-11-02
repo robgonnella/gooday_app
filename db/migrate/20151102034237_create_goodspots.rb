@@ -7,6 +7,8 @@ class CreateGoodspots < ActiveRecord::Migration
       t.string :url
       t.string :category
       t.string :goodvotes
+      t.references :user, index: true, foreign_key: true
+      t.references :location, index: true, foreign_key: true
 
       t.timestamps null: false
     end

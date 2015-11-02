@@ -1,0 +1,2 @@
+class GoodspotsController < ApplicationController
+end

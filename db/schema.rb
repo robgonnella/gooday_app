@@ -23,9 +23,14 @@ ActiveRecord::Schema.define(version: 20151102034237) do
     t.string   "url"
     t.string   "category"
     t.string   "goodvotes"
+    t.integer  "user_id"
+    t.integer  "location_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  add_index "goodspots", ["location_id"], name: "index_goodspots_on_location_id", using: :btree
+  add_index "goodspots", ["user_id"], name: "index_goodspots_on_user_id", using: :btree
 
   create_table "locations", force: :cascade do |t|
     t.string   "state"
@@ -40,8 +45,14 @@ ActiveRecord::Schema.define(version: 20151102034237) do
     t.string   "username"
     t.integer  "goodpoints"
     t.string   "password_digest"
+    t.integer  "location_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
 
+  add_index "users", ["location_id"], name: "index_users_on_location_id", using: :btree
+
+  add_foreign_key "goodspots", "locations"
+  add_foreign_key "goodspots", "users"
+  add_foreign_key "users", "locations"
 end
