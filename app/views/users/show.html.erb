@@ -1,1 +1,15 @@
 <h1> Show View </h1>
+
+<table>
+  <% @user.goodspots.each do |gs| %>
+      <tr>
+        <td><%= gs.name %></td>
+        <td><%= gs.description %></td>
+      </tr>
+  <% end %>
+</table>
+
+
+
+<%= button_to 'Delete Account', user_path, method: :delete %>
+
