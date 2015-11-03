@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  root 'users#index'
+  root 'sessions#index'
   resources :locations
   resources :users
   resources :goodspots
+  resources :sessions
+  get '/login', to: 'sessions#new'
 end

@@ -27,6 +27,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'bootstrap_form'  # if you want bootstrap forms!
+
+gem 'geocoder'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
