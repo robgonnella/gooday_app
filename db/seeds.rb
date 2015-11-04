@@ -3,6 +3,8 @@ Goodspot.destroy_all
 User.destroy_all
 Location.destroy_all
 
+
+
 l1 = Location.create(
   state: "CA",
   city: "Los Angeles"
@@ -10,8 +12,7 @@ l1 = Location.create(
 l2 = Location.create(
   state: "MA",
   city: "Boston"
-  )
-
+)
 
 u1 = User.create(
   username: "robgonnella",

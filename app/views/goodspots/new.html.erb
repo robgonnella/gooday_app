@@ -1,0 +1,68 @@
+
+
+<h1>Add Your Goodspot!</h1>
+
+
+
+<%= form_for @goodspot do |f| %>
+
+
+  <% if @goodspot.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in @goodspot.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+
+
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+
+
+
+  <div class="field">
+    <%= f.label :state%>
+    <%= f.select :location, @states %>
+  </div>
+
+
+
+
+  <div class="field">
+    <%= f.label :city%>
+    <%= f.select :location, @cities %>
+  </div>
+
+
+
+
+  <div class="field">
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+  </div>
+
+
+
+
+  <div class="field">
+    <%= f.label :category %>
+    <%= f.select :category, @categories %>
+  </div>
+
+  <div class="actions"><%= f.submit %></div>
+<% end %>
