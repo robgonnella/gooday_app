@@ -254,3 +254,16 @@ g16 = u6.goodspots.create(
   location:     l1
 )
 
+g17 = u7.goodspots.create(
+  name:         "The Busy Bee",
+  description:  "Greasy breakfast!",
+  category:     "Restaurant",
+  location:     l2
+)
+g17 = u1.goodspots.create(
+  name:         "The Middle East",
+  description:  "Best Live Bands in Town!",
+  category:     "Venue",
+  location:     l2
+)
+

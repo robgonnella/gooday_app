@@ -1,4 +1,18 @@
 class GoodspotsController < ApplicationController
+  def index
+    # we filter the list of goodspots
+    @goodspots = Goodspot.all
+
+    if params[:location] != ""
+      @goodspots = @goodspots.select{|gs| gs.location_id == params[:location].to_i}
+    end
+    if params[:category] != ""
+      @goodspots = @goodspots.select{|gs| gs.category == params[:category]}
+    end
+
+    @locations_options = Location.all.map { |location| ["#{location.city}, #{location.state}", location.id] }
+    @categories = ["Restaurant", "Venue", "Museum", "Tours", "Art", "Food", "Surfing"] #.map {|c| [c, c] }
+  end
 
   def new
     @goodspot = Goodspot.new
@@ -22,6 +36,7 @@ class GoodspotsController < ApplicationController
 
 
   def show
+
   end
 
 
