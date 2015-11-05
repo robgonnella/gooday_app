@@ -1,15 +1,12 @@
 <h1> Here Are Your Goodspots </h1>
 
-<table>
-  <% @user.goodspots.each do |gs| %>
-      <tr>
-        <td><%= gs.name %></td>
-        <td><%= gs.description %></td>
-      </tr>
-  <% end %>
-</table>
 
 
+
+<% @user.goodspots.each do |gs| %>
+  <p><%= gs.name + ' / ' + gs.category %></p>
+  <p><%= link_to (image_tag (gs.image)), goodspot_path(gs.id)  %>
+<% end %>
 
 
 <%= button_to 'Delete Account', user_path, method: :delete %>

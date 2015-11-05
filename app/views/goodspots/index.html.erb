@@ -7,5 +7,6 @@
 <% end %>
 
 <% @goodspots.each do |gs| %>
-  <p><%= gs.name %></p>
+  <p><%= gs.name + ' / ' + gs.category%></p>
+  <p><%= link_to (image_tag (gs.image)), goodspot_path(gs.id)  %>
 <% end %>

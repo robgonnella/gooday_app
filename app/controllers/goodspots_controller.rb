@@ -11,7 +11,7 @@ class GoodspotsController < ApplicationController
     end
 
     @locations_options = Location.all.map { |location| ["#{location.city}, #{location.state}", location.id] }
-    @categories = ["Restaurant", "Venue", "Museum", "Tours", "Art", "Food", "Surfing"] #.map {|c| [c, c] }
+    @categories = ["Food/Drink", "Live Venue", "Movies", "Museum", "Tours", "Art/Music", "Misc.", "Surfing"] #.map {|c| [c, c] }
   end
 
   def new
@@ -20,7 +20,7 @@ class GoodspotsController < ApplicationController
     @states = Location.all.map { |l| l.state }
     @cities = Location.all.map { |l| l.city }
 
-    @categories = ["Restaurant", "Venue", "Museum", "Tours", "Art", "Food", "Surfing"]
+    @categories = ["Food/Drink", "Live Venue", "Movies", "Museum", "Tours", "Art/Music", "Misc.", "Surfing"]
   end
 
 

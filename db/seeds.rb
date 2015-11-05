@@ -18,61 +18,71 @@ u1 = User.create(
   username: "robgonnella",
   email:    "robgonnella@gmail.com",
   password: "123",
-  password_confirmation: "123"
+  password_confirmation: "123",
+  location: l2
 )
 u2 = User.create(
   username: "burlweathers",
   email:    "burlweathers@gmail.com",
   password: "123",
-  password_confirmation: "123"
+  password_confirmation: "123",
+  location: l1
 )
 u3 = User.create(
   username: "taconator",
   email:    "taconator@gmail.com",
   password: "123",
-  password_confirmation: "123"
+  password_confirmation: "123",
+  location: l1
 )
 u4 = User.create(
   username: "jamesbrown",
   email:    "sexmachine@gmail.com",
   password: "123",
-  password_confirmation: "123"
+  password_confirmation: "123",
+  location: l2
 )
 u5 = User.create(
   username: "mrT",
   email:    "mrT@gmail.com",
   password: "123",
-  password_confirmation: "123"
+  password_confirmation: "123",
+  location: l2
 )
 u6 = User.create(
   username: "georgecarlin",
   email:    "georgecarlin@gmail.com",
   password: "123",
-  password_confirmation: "123"
+  password_confirmation: "123",
+  location: l1
 )
 u7 = User.create(
   username: "georgeforeman",
   email:    "georgeforeman@gmail.com",
   password: "123",
-  password_confirmation: "123"
+  password_confirmation: "123",
+  location: l1
 )
 u8 = User.create(
   username: "georgeharrison",
   email:    "georgeharrison@gmail.com",
   password: "123",
-  password_confirmation: "123"
+  password_confirmation: "123",
+  location: l2
 )
 u9 = User.create(
   username: "georgeclinton",
   email:    "georgeclinton@gmail.com",
   password: "123",
-  password_confirmation: "123"
+  password_confirmation: "123",
+  location: l2
 )
 u10 = User.create(
   username: "curiousgeorge",
   email:    "curiousgeorge@gmail.com",
   password: "123",
-  password_confirmation: "123"
+  password_confirmation: "123",
+  location: l1
 )
 
 g1 = u1.goodspots.create(
@@ -83,15 +93,17 @@ g1 = u1.goodspots.create(
   address:      "9341 Venice Blvd Culver City CA 90232",
   url:          "http://www.mjt.org/",
   category:     "Museum",
-  location: l1
+  location:     l1,
+  image:        "https://i.imgur.com/oqbn4yp.png"
 )
 g2 = u2.goodspots.create(
   name:         "Electric Lotus",
   description:  "Awesome Indian cuisine in Los Feliz!",
   address:      "1739 N. Vermont Ave Los Angeles CA 90027",
   url:          "http://electriclotuslosfeliz.com/",
-  category:     "Restaurant",
-  location: l1
+  category:     "Food/Drink",
+  location:     l1,
+  image:        "https://i.imgur.com/sp9vGU5.png"
 )
 
 g3 = u3.goodspots.create(
@@ -101,16 +113,18 @@ g3 = u3.goodspots.create(
                 and Ron Jeremy!",
   address:      "9015 Sunset Blvd West Hollywood CA 90069",
   url:          "http://www.rainbowbarandgrill.com/",
-  category:     "Restaurant",
-  location:     l1
+  category:     "Food/Drink",
+  location:     l1,
+  image:        "https://i.imgur.com/5H3pe7r.png"
   )
 g4 = u4.goodspots.create(
   name:         "Little Beast",
   description:  "Awesome Indian cuisine in Los Feliz!",
   address:      "1739 N. Vermont Ave Los Angeles CA 90027",
   url:          "http://www.littlebeastrestaurant.com/",
-  category:     "Restaurant",
-  location:     l1
+  category:     "Food/Drink",
+  location:     l1,
+  image:        "https://i.imgur.com/uczTL25.png"
   )
 g5 = u5.goodspots.create(
   name:         "The Smell",
@@ -121,8 +135,9 @@ g5 = u5.goodspots.create(
                 and artistic innovation and freedom.",
   address:      "247 S. Main Street Los Angeles CA 90012",
   url:          "http://www.thesmell.org/",
-  category:     "Venue",
-  location:     l1
+  category:     "Live Venue",
+  location:     l1,
+  image:        "https://i.imgur.com/4tUdt5o.png"
 )
 g6 = u6.goodspots.create(
   name:         "Annenberg Space for Photography",
@@ -140,7 +155,8 @@ g6 = u6.goodspots.create(
                 the Annenberg Space's signature.",
   url:          "https://annenbergphotospace.org/",
   category:     "Museum",
-  location:     l1
+  location:     l1,
+  image:        "https://i.imgur.com/LzwbyJe.png"
 )
 g7 = u7.goodspots.create(
   name:         "Greek Theatre",
@@ -153,28 +169,32 @@ g7 = u7.goodspots.create(
                 a starring role in ‘Get Him to The Greek’.",
   address:      "2700 North Vermont Ave Los Angeles CA 90027",
   url:          "http://www.greektheatrela.com/",
-  category:     "Venue",
-  location:     l1
+  category:     "Live Venue",
+  location:     l1,
+  image:        "https://i.imgur.com/uznA8mC.png"
 )
 g8 = u8.goodspots.create(
   name:         "Angel City Brewery",
   description:  "BEEEEEEER!",
   category:     "Tours",
-  location:     l1
+  location:     l1,
+  image:        "https://i.imgur.com/lFOGfDX.png"
 )
 g9 = u9.goodspots.create(
   name:         "Torung",
   description:  "Cheap good-ass thai food!",
-  category:     "Restaurant",
-  location:     l1
+  category:     "Food/Drink",
+  location:     l1,
+  image:        "https://i.imgur.com/UTDiO6k.png"
 )
 g10 = u10.goodspots.create(
   name:         "The Regent Theatre",
   description:  "Beautiful old venue downtown on S. Main St.
                 Saw really great show there last night, sound
                 was fantastic!",
-  category:     "Venue",
-  location:     l1
+  category:     "Live Venue",
+  location:     l1,
+  image:        "https://i.imgur.com/ROjP3Yj.png"
 )
 g11 = u1.goodspots.create(
   name:         "La Luz de Jesus Gallery",
@@ -186,15 +206,17 @@ g11 = u1.goodspots.create(
                 Peggy Guggenheim of Lowbrow.",
   address:      "4633 Hollywood Boulevard Los Angeles CA 90027",
   url:          "http://laluzdejesus.com/",
-  category:     "Art",
-  location:     l1
+  category:     "Art/Music",
+  location:     l1,
+  image:        "https://i.imgur.com/IOstSZt.png"
 )
 g12 = u2.goodspots.create(
   name:         "Best Fish Taco in Encenada",
   description:  "Seriously it's the best!",
   url:          "http://www.bestfishtacoinensenada.com",
-  category:     "Food",
-  location:     l1
+  category:     "Food/Drink",
+  location:     l1,
+  image:        "https://i.imgur.com/22Grw3U.png"
 )
 g13 = u3.goodspots.create(
   name:         "TOPANGA BEACH",
@@ -204,7 +226,8 @@ g13 = u3.goodspots.create(
                 so ideal you might have to compete with plenty of
                 good surfers for waves.",
   category:     "Surfing",
-  location:     l1
+  location:     l1,
+  image:        "https://i.imgur.com/S5C85S6.png"
 )
 g14 = u4.goodspots.create(
   name:         "Vista Theater",
@@ -220,8 +243,9 @@ g14 = u4.goodspots.create(
                 but it's got character and is within walking distance
                 of Silver Lake, Los Feliz and East Hollywood, making it
                 an extra appealing option for Eastsiders.",
-  category:     "Movie Theater",
-  location:     l1
+  category:     "Movies",
+  location:     l1,
+  image:        "https://i.imgur.com/si9SbN6.png"
 )
 g15 = u5.goodspots.create(
   name:         "Grifith Observatory",
@@ -239,7 +263,8 @@ g15 = u5.goodspots.create(
                 coil and the seismograph machine downstairs.",
   address:      "2800 E Observatory Rd, Los Angeles, CA 90027",
   category:     "Museum",
-  location:     l1
+  location:     l1,
+  image:        "https://i.imgur.com/d7TVasV.png"
 )
 g16 = u6.goodspots.create(
   name:         "The Satellite",
@@ -250,20 +275,23 @@ g16 = u6.goodspots.create(
                 everything from experimental noise ensembles to alt-rock
                 stars to arena headliners playing covert sets",
   url:          "http://www.thesatellitela.com/",
-  category:     "Venue",
-  location:     l1
+  category:     "Live Venue",
+  location:     l1,
+  image:        "https://i.imgur.com/Qaw3jB9.png"
 )
 
 g17 = u7.goodspots.create(
   name:         "The Busy Bee",
   description:  "Greasy breakfast!",
-  category:     "Restaurant",
-  location:     l2
+  category:     "Food/Drink",
+  location:     l2,
+  image:        "https://i.imgur.com/r4UHst8.png"
 )
 g17 = u1.goodspots.create(
   name:         "The Middle East",
   description:  "Best Live Bands in Town!",
-  category:     "Venue",
-  location:     l2
+  category:     "Live Venue",
+  location:     l2,
+  image:        "https://i.imgur.com/8m95dWo.png"
 )
 
