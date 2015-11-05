@@ -1,0 +1,46 @@
+
+
+<p><%=@goodspot.name%></p>
+<p><%=@goodspot.description%></p>
+
+
+<div class="container">
+
+<%= form_for @goodspot, html: {mulitpart: true}  do |f| %>
+
+  <div class="form-group"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= f.label :name, "Title", class: "control-lable" %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="form-group container">
+    <%= f.label :description, "Description",class: "control-lable" %>
+    <%= f.text_field :description %>
+  </div>
+  <div class="form-group">
+    <%= f.label :image, "Image" %>
+    <%= f.text_field :image %>
+  </div>
+  <div class="form-group">
+    <%= f.label :url, "URL" %>
+    <%= f.text_field :url %>
+  </div>
+  <div class="form-group">
+    <%= f.label :category, "Category" %>
+    <%= f.select :category, @categories %>
+  </div>
+  <div class="field">
+      <%= f.label :state%>
+      <%= f.select :location, @states %>
+  </div>
+  <div class="field">
+    <%= f.label :city%>
+    <%= f.select :location, @cities %>
+  </div>
+  <div class="form-group">
+    <%= f.label :address, "Address" %>
+    <%= f.text_field :address %>
+  </div>
+
+  <div class="actions"><%= f.submit class: "btn btn-primary", method: :update %></div>
+<% end %>
+</div>

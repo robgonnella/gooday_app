@@ -1,11 +1,13 @@
 
+<% if flash[:notice] %>
+  <p><%= flash[:notice] %></p>
+<% end %>
+
 <div class="container">
   <p><%= @goodspot.name + ' / ' + @goodspot.category%></p>
   <p><%= image_tag(@goodspot.image) %> </p>
   <p><%=  @goodspot.description %></p>
 </div>
-
-
 
 
 
