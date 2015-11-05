@@ -2,14 +2,16 @@
 
 
 
-
+<div class="container">
 <% @user.goodspots.each do |gs| %>
   <p><%= gs.name + ' / ' + gs.category %></p>
-  <p><%= link_to (image_tag (gs.image)), goodspot_path(gs.id)  %>
+  <p><%= link_to (image_tag (gs.image)), goodspot_path(gs.id) %></p>
 <% end %>
+</div>
 
 
 <%= button_to 'Delete Account', user_path, method: :delete %>
+
 
 
 

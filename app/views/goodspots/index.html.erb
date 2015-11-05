@@ -1,12 +1,15 @@
-<%= form_tag goodspots_path, method: :get do %>
-  <%= label_tag(:location, "Browse by Location") %>
-  <%= select_tag :location, options_for_select(@locations_options, params[:location]), include_blank: true %>
-  <%= label_tag(:category, "Browse by Category") %>
-  <%= select_tag :category, options_for_select(@categories, params[:category]), :include_blank => true %>
-  <%= submit_tag "Submit" %>
-<% end %>
 
-<% @goodspots.each do |gs| %>
-  <p><%= gs.name + ' / ' + gs.category%></p>
-  <p><%= link_to (image_tag (gs.image)), goodspot_path(gs.id)  %>
-<% end %>
+<div class="container">
+  <%= form_tag goodspots_path, method: :get do %>
+    <%= label_tag(:location, "Browse by Location") %>
+    <%= select_tag :location, options_for_select(@locations_options, params[:location]), include_blank: true %>
+    <%= label_tag(:category, "Browse by Category") %>
+    <%= select_tag :category, options_for_select(@categories, params[:category]), :include_blank => true %>
+    <%= submit_tag "Submit" %>
+  <% end %>
+
+  <% @goodspots.each do |gs| %>
+    <p><%= gs.name + ' / ' + gs.category%></p>
+    <p><%= link_to (image_tag (gs.image)), goodspot_path(gs.id)  %></p>
+  <% end %>
+</div>

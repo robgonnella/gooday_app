@@ -1,7 +1,7 @@
 <h1>Login</h1>
 <p id="alert"><%= alert %></p>
 
-
+<div class="container">
 <%= form_tag sessions_path, class: 'form-inline' do %>
   <div class="form-group">
     <%= label_tag :username%>
@@ -20,6 +20,7 @@
     <%= submit_tag "Log in", class: 'btn btn-default' %>
   </div>
 <% end %>
+</div>
 
 
 
