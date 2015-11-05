@@ -4,7 +4,7 @@
   <p><%= flash[:notice] %></p>
 <% end %>
 
-<%= form_for @user do |f| %>
+<%= form_for @user, class: "form-horizontal center" do |f| %>
   <% if @user.errors.any? %>
     <div class="error_messages">
       <h2>Form is invalid</h2>
@@ -15,21 +15,23 @@
       </ul>
     </div>
   <% end %>
-  <div class="field">
-    <%= f.label :email %>
+  <div class="form-group">
+    <%= f.label :email, "Email", class: "col-md-4 control-lable" %>
     <%= f.text_field :email %>
   </div>
-  <div class="field">
-    <%= f.label :username %>
+  <div class="form-group">
+    <%= f.label :username, "Username",class: "control-lable" %>
     <%= f.text_field :username %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :password %>
     <%= f.password_field :password %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions"><%= f.submit %></div>
 <% end %>
+
+

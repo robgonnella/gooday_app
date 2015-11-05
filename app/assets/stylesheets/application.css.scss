@@ -17,3 +17,36 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+  // background-color:  #BFCCCA;
+  background: url('https://i.imgur.com/RZVS45h.png') no-repeat center center fixed;
+  color: white;
+  padding-top: 50px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index: 0;
+}
+
+
+header {
+  color: black;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+
+nav {
+  padding: 10px;
+}
+
+.user_logout {
+  float: right;
+}
+main {
+  text-align: center;
+  color: black;
+}

@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 
 
   def show
+
   end
 
 
@@ -53,7 +54,7 @@ class UsersController < ApplicationController
 
 
   def authorize
-    @user = User.find(params[:id])
+    @user = User.find(current_user)
     redirect_to root_path if @user != current_user
   end
 
