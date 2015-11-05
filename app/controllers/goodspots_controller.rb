@@ -36,6 +36,7 @@ class GoodspotsController < ApplicationController
 
 
   def show
+    @goodspot = Goodspot.find(params[:id])
 
   end
 
