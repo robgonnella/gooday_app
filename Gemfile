@@ -30,11 +30,8 @@ gem 'bootstrap_form'  # if you want bootstrap forms!
 
 gem 'geocoder'
 
-# Use Unicorn as the app server
-# gem 'unicorn'
+gem 'puma'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
 gem 'rails_12factor', group: :production
 
 group :development, :test do
