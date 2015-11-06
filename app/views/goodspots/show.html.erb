@@ -3,15 +3,18 @@
   <p><%= flash[:notice] %></p>
 <% end %>
 
-<div class="container">
+<div class="container show">
   <p><%= @goodspot.name + ' / ' + @goodspot.category%></p>
   <p><%= image_tag(@goodspot.image) %> </p>
-  <p><%=  @goodspot.description %></p>
-  <p>
-    <%= label_tag :address, "Address: "%> <%= @goodspot.address %></p>
-  <p> <%= label_tag :username, "User: "%> <%= link_to @goodspot.user.username, user_path(@goodspot.user.id) %></p>
+  <p> <%=label_tag :username,"User:"%><%=link_to @goodspot.user.username, user_path(@goodspot.user.id) %></p>
+  <p><%=label_tag :description,"Description:"%><%=@goodspot.description%></p>
+  <% if @goodspot.address %>
+    <p><%=label_tag :address,"Address:"%><%=@goodspot.address %></p>
+  <% end %>
+  <%if @goodspot.url %>
+    <p><%=label_tag :url,"Website:"%><%=link_to @goodspot.url, @goodspot.url, :target => 'blank' %></p>
+  <% end %>
 </div>
-
 
 
 

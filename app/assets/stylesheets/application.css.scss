@@ -19,7 +19,6 @@
 @import "bootstrap";
 
 body {
-  // background-color:  #BFCCCA;
   background: url('https://i.imgur.com/RZVS45h.png') no-repeat center center fixed;
   color: white;
   padding-top: 50px;
@@ -27,7 +26,6 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  z-index: 0;
 }
 
 
@@ -46,7 +44,7 @@ nav {
 .user_logout {
   float: right;
 }
-main {
+selection {
   text-align: center;
   color: black;
 }
@@ -59,4 +57,17 @@ label {
 }
 select {
   min-width: 150px
+}
+div {
+  text-align: center;
+}
+
+.clearfix {
+  min-height: 300px;
+  max-height: 400px;
+}
+.show {
+  text-align: left;
+  min-width: 100px;
+
 }

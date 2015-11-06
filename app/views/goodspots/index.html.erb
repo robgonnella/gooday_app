@@ -8,8 +8,12 @@
     <%= submit_tag "Go!", class: "btn btn-primary" %>
   <% end %>
 
-  <% @goodspots.each do |gs| %>
-    <p><%= gs.name + ' / ' + gs.category%></p>
-    <p><%= link_to (image_tag (gs.image)), goodspot_path(gs.id)  %></p>
+  <div class="row">
+    <% @goodspots.each do |gs| %>
+    <div class="col-lg-3 col-med-4 col-sm-6 col-xm-1 clearfix">
+      <p><%= gs.name %></p>
+      <p><%= link_to (image_tag (gs.image), :class => "img-responsive"), goodspot_path(gs.id) %></p>
+    </div>
   <% end %>
+  </div>
 </div>
