@@ -30,7 +30,7 @@ gem 'bootstrap_form'  # if you want bootstrap forms!
 
 gem 'geocoder'
 
-# gem 'puma'
+gem 'puma'
 
 gem 'rails_12factor', group: :production
 
