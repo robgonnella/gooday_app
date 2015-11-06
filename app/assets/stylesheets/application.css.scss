@@ -39,6 +39,10 @@ header {
 
 nav {
   padding: 10px;
+  text-align: left;
+}
+.navbtns {
+  float: left;
 }
 
 .user_logout {
@@ -69,5 +73,8 @@ div {
 .show {
   text-align: left;
   min-width: 100px;
-
+}
+.user-post {
+  max-width: 300px;
+  margin: 0 auto;
 }

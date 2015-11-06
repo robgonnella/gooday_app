@@ -11,7 +11,7 @@
   <% @user.goodspots.each do |gs| %>
     <% if @user.id == session[:user_id] %>
       <p><%= gs.name + ' / ' + gs.category %></p>
-      <p><%= link_to (image_tag (gs.image)), goodspot_path(gs.id) %></p>
+      <p><%= link_to (image_tag (gs.image), :class => "img-responsive user-post"), goodspot_path(gs.id) %></p>
       <%= button_to "Update", edit_goodspot_path(gs), method: :get %>
       <%= button_to "Delete Goodspot", goodspot_path(gs), method: :delete %>
     <% else %>
@@ -25,7 +25,5 @@
 <% if @user.id == session[:user_id] %>
 <%= button_to 'Delete Account', user_path, method: :delete %>
 <% end %>
-
-
 
 

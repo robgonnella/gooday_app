@@ -29,12 +29,13 @@
             <%= link_to 'Logout', session_path('dummy'), method: :delete %>
          </div>
 
-
+        <div class="navbtns">
           <a class="btn btn-primary" href="<%=user_path(current_user)%>" role="button">Profile</a>
           &nbsp;&nbsp;|&nbsp;&nbsp;
           <a class="btn btn-primary" href="/goodspots" role="button">Browse</a>
           &nbsp;&nbsp;|&nbsp;&nbsp;
           <a class="btn btn-primary" href="/goodspots/new" role="button">Post</a>
+        </div>
 
 
         <% else %>
