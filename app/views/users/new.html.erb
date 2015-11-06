@@ -15,12 +15,12 @@
       </ul>
     </div>
   <% end %>
-  <div class="form-group"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <%= f.label :email, "Email", class: "control-lable" %>
+  <div class="form-group">
+    <%= f.label :email, "Email" %>
     <%= f.text_field :email %>
   </div>
   <div class="form-group">
-    <%= f.label :username, "Username",class: "control-lable" %>
+    <%= f.label :username, "Username" %>
     <%= f.text_field :username %>
   </div>
   <div class="form-group">
@@ -28,7 +28,7 @@
     <%= f.password_field :password %>
   </div>
   <div class="form-group">
-    <%= f.label :password_confirmation %>
+    <%= f.label :password_confirmation, "Confirm Pass" %>
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions"><%= f.submit class: "btn btn-primary" %></div>

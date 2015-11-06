@@ -5,7 +5,7 @@
     <%= select_tag :location, options_for_select(@locations_options, params[:location]), include_blank: true %>
     <%= label_tag(:category, "Browse by Category") %>
     <%= select_tag :category, options_for_select(@categories, params[:category]), :include_blank => true %>
-    <%= submit_tag "Submit" %>
+    <%= submit_tag "Go!", class: "btn btn-primary" %>
   <% end %>
 
   <% @goodspots.each do |gs| %>
