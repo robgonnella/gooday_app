@@ -6,7 +6,7 @@
 
 <div class="container">
 
-<%= form_for @goodspot, html: {mulitpart: true}  do |f| %>
+<%= form_for @goodspot do |f| %>
 
   <div class="form-group"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <%= f.label :name, "Title", class: "control-lable" %>
@@ -21,7 +21,7 @@
     <%= f.text_field :image %>
   </div>
   <div class="form-group">
-    <%= f.label :url, "URL" %>
+    <%= f.label :url, "Website" %>
     <%= f.text_field :url %>
   </div>
   <div class="form-group">

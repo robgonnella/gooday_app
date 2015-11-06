@@ -5,7 +5,13 @@ class UsersController < ApplicationController
 
 
   def show
-    @user = User.find(current_user)
+
+    if
+      params[:id] == session[:user_id]
+      @user = @current_user
+    else
+      @user = User.find(params[:id])
+    end
   end
 
 

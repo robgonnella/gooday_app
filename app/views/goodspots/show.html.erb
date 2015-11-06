@@ -7,6 +7,9 @@
   <p><%= @goodspot.name + ' / ' + @goodspot.category%></p>
   <p><%= image_tag(@goodspot.image) %> </p>
   <p><%=  @goodspot.description %></p>
+  <p>
+    <%= label_tag :address, "Address: "%> <%= @goodspot.address %></p>
+  <p> <%= label_tag :username, "User: "%> <%= link_to @goodspot.user.username, user_path(@goodspot.user.id) %></p>
 </div>
 
 

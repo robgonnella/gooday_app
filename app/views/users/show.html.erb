@@ -1,21 +1,30 @@
-<h1> Here Are Your Goodspots </h1>
+
+
+  <h1> Here Are Your Goodspots </h1>
+
 
 <% if flash[:notice] %>
   <p><%= flash[:notice] %></p>
 <% end %>
 
 <div class="container">
-<% @user.goodspots.each do |gs| %>
-  <p><%= gs.name + ' / ' + gs.category %></p>
-  <p><%= link_to (image_tag (gs.image)), goodspot_path(gs.id) %></p>
-  <%= button_to "Update", edit_goodspot_path(gs), method: :get %>
-  <%= button_to "Delete Goodspot", goodspot_path(gs), method: :delete %>
-<% end %>
+  <% @user.goodspots.each do |gs| %>
+    <% if @user.id == session[:user_id] %>
+      <p><%= gs.name + ' / ' + gs.category %></p>
+      <p><%= link_to (image_tag (gs.image)), goodspot_path(gs.id) %></p>
+      <%= button_to "Update", edit_goodspot_path(gs), method: :get %>
+      <%= button_to "Delete Goodspot", goodspot_path(gs), method: :delete %>
+    <% else %>
+      <p><%= gs.name + ' / ' + gs.category %></p>
+      <p><%= link_to (image_tag (gs.image)), goodspot_path(gs.id) %></p>
+    <% end %>
+
+  <% end %>
 </div>
 
-
+<% if @user.id == session[:user_id] %>
 <%= button_to 'Delete Account', user_path, method: :delete %>
-
+<% end %>
 
 
 

@@ -75,7 +75,7 @@ class GoodspotsController < ApplicationController
     private
     # Implement Strong Params
     def goodspot_params
-      params.require(:goodspot).permit(:name, :description, :address, :state, :city, :category)
+      params.require(:goodspot).permit(:name, :description, :address, :state, :city, :category, :url, :image)
     end
 end
 
